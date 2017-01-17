@@ -1,0 +1,21 @@
+---
+# iTerm2 shell integration
+
+# Get $HOME
+- set_fact:
+    HOME: "{{ lookup('env', 'HOME') }}"
+
+- name: Check if shell integration has been already done
+  stat:
+    path: "{{ HOME }}/{{ iterm2_shell_integration_script }}"
+  register: iterm2_integration_exists
+
+- name: Download iTerm2 shell integration script
+  get_url:
+    url: "{{ iterm2_shell_integration_base_url }}/{{ iterm2_shell_integration_script }}"
+    dest: "{{ HOME }}/"
+  when: iterm2_integration_exists.stat.exists == False
+
+- name: Run iTerm2 shell integration script
+  command: "/bin/bash {{ HOME }}/{{ iterm2_shell_integration_script }}"
+  when: iterm2_integration_exists.stat.exists == False
