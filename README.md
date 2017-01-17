@@ -14,8 +14,8 @@ Role Variables
 --------------
 
 ```ansible
-    shell_integration_script: install_shell_integration.sh
-    base_url: https://iterm2.com/misc
+    iterm2_shell_integration_script: install_shell_integration.sh
+    iterm2_shell_integration_base_url: https://iterm2.com/misc
 ```
 
 Dependencies
