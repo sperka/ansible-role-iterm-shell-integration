@@ -1,8 +1,9 @@
-iTerm2 shell integration ansbile role
-=====================================
+Ansible Role: iTerm2 shell integration
+======================================
 
-An Ansible role that installs iTerm2 shell integration. For more information,
-check [iTerm2 shell integration](https://www.iterm2.com/documentation-shell-integration.html)
+[![Build Status](https://travis-ci.org/sperka/ansible-role-iterm-shell-integration.svg?branch=master)](https://travis-ci.org/sperka/ansible-role-iterm-shell-integration)
+
+Installs [iTerm2 shell integration](https://www.iterm2.com/documentation-shell-integration.html)
 
 Requirements
 ------------
